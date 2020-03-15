@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>fuo</artifactId>
+        <groupId>cn.night</groupId>
+        <version>${fuo.version}</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>fuo.rpc.jsf2</artifactId>
+    <properties>
+        <jsf.version>1.0.4-RELEASE</jsf.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>cn.night</groupId>
+            <artifactId>fuo.core</artifactId>
+            <version>${fuo.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jd</groupId>
+            <artifactId>jsf2-all</artifactId>
+            <version>${jsf.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.alibaba</groupId>
+                    <artifactId>fastjson</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+</project>

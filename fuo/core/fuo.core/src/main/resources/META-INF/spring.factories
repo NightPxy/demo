@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=cn.night.fuo.FuoStarter
+
+# cn.night.fuo.FuoStarter,
+org.springframework.context.ApplicationContextInitializer=cn.night.fuo.spring.SpringContextHolder

@@ -1,0 +1,28 @@
+###
+#  JSF 配置
+##
+rpc:
+  ## 注解扫描的包路径，数组格式
+  packages:
+    - my.wisdomworkbench
+  ## 默认注册中心配置，若provider没有配置regstryNames，默认取此配置
+  registry:
+    registry: jsf
+    address: http://i.jsf.jd.com
+  ## 杰夫2.0 多注册中心以及重试机制
+  registries:
+    - id: registry-0
+      address: http://i.jsf.jd.com
+      registry: jsf
+  ## 接口调用配置
+  consumers:
+    - id: com.jd.user.sdk.export.UserInfoExportService
+      interfaceClazz: com.jd.user.sdk.export.UserInfoExportService
+      registryName: registry-0
+      alias: userSdk-135
+      parameters:
+        source: jz_zf_jdpay
+    - id: com.wangyin.goldeneye.facade.customerlevel.api.CustomerLevelUserService
+      interfaceClazz: com.wangyin.goldeneye.facade.customerlevel.api.CustomerLevelUserService
+      registryName: registry-0
+      alias: ${jsf.alias.customerLevelUserService} # GOLDEN-TEST

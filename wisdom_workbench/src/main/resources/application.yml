@@ -1,0 +1,13 @@
+env:
+  id: xxx
+  name: main
+
+# 激活附属配置文件
+#   必须以application开头,约定为application-??
+#
+spring:
+  profiles:
+    active: fuo,jsf,env,jsf-property
+
+
+

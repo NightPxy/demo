@@ -1,0 +1,28 @@
+fuo:
+  serializer:
+    json:
+      formats:
+        - target: java.util.Date
+          format: cn.night.fuo.serializer.json.serializer.format.DateFormatSerializer
+  web:
+    log:
+      enabled: true
+      methodFilters: GET,POST
+      includeInfos: REQUEST_URI,REQUEST_METHOD,REQUEST_QUERYSTRING,REQUEST_BODY,RESPONSE_BODY,EXCEPTION
+    cors:
+      enable: true
+      methods: '*'
+      age: 36000
+      credentials: true
+      origins:
+        - soctest.jd.com
+        - localhost
+        - 127.0.0.1
+    mvc:
+      interceptors:
+        - name: cn.night.fuo.web.cors.CORSInterceptor
+          interceptor: cn.night.fuo.web.cors.CORSInterceptor
+          path: /**
+          excludes:
+            - /merchant/**
+            - /goldenEye/ivr/saveSatisfactionInfo.htm

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>fuo</artifactId>
+        <groupId>cn.night</groupId>
+        <version>${fuo.version}</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>fuo.log.log4j2</artifactId>
+    <properties>
+        <slf4j.log4j2.version>2.9.1</slf4j.log4j2.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>cn.night</groupId>
+            <artifactId>fuo.core</artifactId>
+            <version>${fuo.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${slf4j.log4j2.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
